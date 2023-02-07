@@ -9,8 +9,12 @@ interface IProps {
 export default function ImageSwitch({ mobileSrc, desktopSrc, alt }: IProps) {
   return (
     <>
-      <Image src={mobileSrc} alt={alt} className="w-full lg:hidden" />
-      <Image src={desktopSrc} alt={alt} className="hidden w-full lg:block" />
+      <Image src={mobileSrc} alt={alt} className="w-full desktop:hidden" />
+      <Image
+        src={desktopSrc}
+        alt={alt}
+        className="hidden w-full desktop:block"
+      />
     </>
   );
 }

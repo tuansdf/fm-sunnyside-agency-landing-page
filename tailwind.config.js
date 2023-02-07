@@ -7,6 +7,10 @@ module.exports = {
         sans: ["var(--font-body)"],
         serif: ["var(--font-heading)"],
       },
+      screens: {
+        mobile: "375px",
+        desktop: "1440px",
+      },
     },
     colors: {
       primary: {

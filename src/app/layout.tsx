@@ -11,7 +11,7 @@ export default function RootLayout({ children }: IProps) {
     <html lang="en">
       <head />
       <body
-        className={`${bodyFont.variable} ${headingFont.variable} flex min-h-screen flex-col font-sans text-lg text-neutral-900`}
+        className={`${bodyFont.variable} ${headingFont.variable} relative mx-auto flex min-h-screen w-full max-w-screen-mobile flex-col font-sans text-lg text-neutral-900 desktop:max-w-screen-desktop`}
       >
         {children}
       </body>

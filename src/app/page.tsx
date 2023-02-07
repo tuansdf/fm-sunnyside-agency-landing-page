@@ -34,7 +34,7 @@ import transformImgMobile from "/public/images/mobile/image-transform.jpg";
 export default function Page() {
   return (
     <>
-      <nav className="absolute z-10 flex w-full items-center justify-between px-8 py-10">
+      <nav className="absolute z-10 flex w-full items-center justify-between px-6 py-8">
         <Image src={logoImg} alt="logo" />
         <button>
           <Image src={hamburgerIcon} alt="hamburger" />
@@ -49,153 +49,165 @@ export default function Page() {
             alt="header image"
           />
 
-          <div className="absolute flex flex-col items-center">
-            <div className="mb-16 text-center font-serif text-5xl font-black uppercase leading-tight tracking-widest text-neutral-0">
+          <div className="absolute flex w-full max-w-xs flex-col items-center">
+            <div className="mb-16 text-center font-serif text-4xl font-black uppercase leading-tight tracking-[0.2em] text-neutral-0">
               We are creatives
             </div>
             <Image src={arrowDownIcon} alt="" />
           </div>
         </section>
 
-        <section>
-          <ImageSwitch
-            mobileSrc={transformImgMobile}
-            desktopSrc={transformImgDesktop}
-            alt="transform image"
-          />
-        </section>
+        <div className="desktop:grid desktop:grid-cols-2">
+          <section>
+            <ImageSwitch
+              mobileSrc={transformImgMobile}
+              desktopSrc={transformImgDesktop}
+              alt="transform image"
+            />
+          </section>
 
-        <section className="mx-auto max-w-xs space-y-8 py-16 text-center">
-          <h2 className="font-serif text-4xl font-black">
-            Transform your brand
-          </h2>
-          <p className="text-neutral-800">
-            We are a full-service creative agency specializing in helping brands
-            grow fast. Engage your clients through compelling visuals that do
-            most of the marketing for you.
-          </p>
-          <button className="border-b-8 border-primary-yellow/25 px-2 font-serif font-black uppercase leading-3">
-            learn more
-          </button>
-        </section>
-
-        <section>
-          <ImageSwitch
-            mobileSrc={standOutImgMobile}
-            desktopSrc={standOutImgDesktop}
-            alt="stand out image"
-          />
-        </section>
-
-        <section className="mx-auto max-w-xs space-y-8 py-16 text-center">
-          <h2 className="font-serif text-4xl font-black">
-            Stand out to the right audience
-          </h2>
-          <p className="text-neutral-800">
-            Using a collaborative formula of designers, researchers,
-            photographers, videographers, and copywriters, we&apos;ll build and
-            extend your brand in digital places.
-          </p>
-          <button className="border-b-8 border-primary-red/25 px-2 font-serif font-black uppercase leading-3">
-            learn more
-          </button>
-        </section>
-
-        <section className="relative">
-          <ImageSwitch
-            mobileSrc={graphicDesignImgMobile}
-            desktopSrc={graphicDesignImgDesktop}
-            alt="graphic design image"
-          />
-
-          <div className="absolute bottom-0 right-0 left-0 mx-auto mb-20 max-w-sm space-y-8 text-center text-primary-cyan-1">
-            <h2 className="font-serif text-4xl font-black">Graphic Design</h2>
-            <p>
-              Great design makes you memorable. We deliver artwork that
-              underscores your brand message and captures potential
-              clients&apos; attention.
+          <section className="mx-auto max-w-xs space-y-8 py-16 text-center desktop:order-first">
+            <h2 className="mb-6 font-serif text-3xl font-black">
+              Transform your brand
+            </h2>
+            <p className="mb-8 text-neutral-800">
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
             </p>
-          </div>
-        </section>
+            <button className="border-b-8 border-primary-yellow/25 px-2 font-serif text-base font-black uppercase leading-3">
+              learn more
+            </button>
+          </section>
 
-        <section className="relative">
-          <ImageSwitch
-            mobileSrc={photographyImgMobile}
-            desktopSrc={photographyImgDesktop}
-            alt="photography image"
-          />
+          <section>
+            <ImageSwitch
+              mobileSrc={standOutImgMobile}
+              desktopSrc={standOutImgDesktop}
+              alt="stand out image"
+            />
+          </section>
 
-          <div className="absolute bottom-0 right-0 left-0 mx-auto mb-20 max-w-sm space-y-8 text-center text-primary-blue">
-            <h2 className="font-serif text-4xl font-black">Photography</h2>
-            <p>
-              Increase the most credibility by getting the most stunning,
-              high-quality photos that improve your business image.
+          <section className="mx-auto max-w-xs py-16 text-center">
+            <h2 className="mb-6 font-serif text-3xl font-black">
+              Stand out to the right audience
+            </h2>
+            <p className="mb-8 text-neutral-800">
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we&apos;ll build
+              and extend your brand in digital places.
             </p>
-          </div>
-        </section>
+            <button className="border-b-8 border-primary-red/25 px-2 font-serif text-base font-black uppercase leading-3">
+              learn more
+            </button>
+          </section>
 
-        <section className="mx-auto max-w-sm space-y-16 px-7 pt-16 pb-20 text-center">
-          <h2 className="font-serif text-base font-black uppercase tracking-[0.3em] text-neutral-600">
+          <section className="relative">
+            <ImageSwitch
+              mobileSrc={graphicDesignImgMobile}
+              desktopSrc={graphicDesignImgDesktop}
+              alt="graphic design image"
+            />
+
+            <div className="absolute bottom-0 right-0 left-0 mx-auto mb-16 max-w-sm px-4 text-center text-primary-cyan-1">
+              <h2 className="mb-6 font-serif text-3xl font-black">
+                Graphic Design
+              </h2>
+              <p className="text-base">
+                Great design makes you memorable. We deliver artwork that
+                underscores your brand message and captures potential
+                clients&apos; attention.
+              </p>
+            </div>
+          </section>
+
+          <section className="relative">
+            <ImageSwitch
+              mobileSrc={photographyImgMobile}
+              desktopSrc={photographyImgDesktop}
+              alt="photography image"
+            />
+
+            <div className="absolute bottom-0 right-0 left-0 mx-auto mb-16 max-w-sm px-4 text-center text-primary-blue">
+              <h2 className="mb-6 font-serif text-3xl font-black">
+                Photography
+              </h2>
+              <p className="text-base">
+                Increase your credibility by getting the most stunning,
+                high-quality photos that improve your business image.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <section className="mx-auto max-w-sm px-7 pt-16 pb-20 text-center desktop:max-w-7xl">
+          <h2 className="mb-16 font-serif text-base font-black uppercase tracking-[0.3em] text-neutral-600">
             Client testimonials
           </h2>
 
-          <div className="flex flex-col items-center space-y-8">
-            <Image
-              src={emilyImg}
-              alt="Emily's image"
-              className="h-16 w-16 rounded-full"
-            />
-            <p className="text-neutral-800">
-              We put our trust in Sunnyside and they delivered, making sure our
-              needs were met and deadlines were always hit.
-            </p>
-            <div>
-              <div className="mb-2 font-serif text-xl font-black">Emily R.</div>
-              <div className="text-sm text-neutral-700">Marketing Director</div>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center space-y-8">
-            <Image
-              src={thomasImg}
-              alt="Thomas's image"
-              className="h-16 w-16 rounded-full"
-            />
-            <p className="text-neutral-800">
-              Sunnyside&apos;s enthusiasm coupled with their keen interest in
-              our brand&apos;s success made it a satisfying and enjoyable
-              experience.
-            </p>
-            <div>
-              <div className="mb-2 font-serif text-xl font-black">
-                Thomas S.
-              </div>
-              <div className="text-sm text-neutral-700">
-                Chief Operating Officer
+          <div className="space-y-16 desktop:grid desktop:grid-cols-3 desktop:gap-10 desktop:space-y-0">
+            <div className="flex flex-col items-center space-y-8">
+              <Image
+                src={emilyImg}
+                alt="Emily's image"
+                className="h-16 w-16 rounded-full"
+              />
+              <p className="text-neutral-800">
+                We put our trust in Sunnyside and they delivered, making sure
+                our needs were met and deadlines were always hit.
+              </p>
+              <div>
+                <div className="mb-2 font-serif text-xl font-black">
+                  Emily R.
+                </div>
+                <div className="text-sm text-neutral-700">
+                  Marketing Director
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="flex flex-col items-center space-y-8">
-            <Image
-              src={jennieImg}
-              alt="Jennie's image"
-              className="h-16 w-16 rounded-full"
-            />
-            <p className="text-neutral-800">
-              Incredible end result! Our sales increased over 400% when we
-              worked with Sunnyside. Highly recommended!
-            </p>
-            <div>
-              <div className="mb-2 font-serif text-xl font-black">
-                Jennie F.
+            <div className="flex flex-col items-center space-y-8">
+              <Image
+                src={thomasImg}
+                alt="Thomas's image"
+                className="h-16 w-16 rounded-full"
+              />
+              <p className="text-neutral-800">
+                Sunnyside&apos;s enthusiasm coupled with their keen interest in
+                our brand&apos;s success made it a satisfying and enjoyable
+                experience.
+              </p>
+              <div>
+                <div className="mb-2 font-serif text-xl font-black">
+                  Thomas S.
+                </div>
+                <div className="text-sm text-neutral-700">
+                  Chief Operating Officer
+                </div>
               </div>
-              <div className="text-sm text-neutral-700">Business Owner</div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-8">
+              <Image
+                src={jennieImg}
+                alt="Jennie's image"
+                className="h-16 w-16 rounded-full"
+              />
+              <p className="text-neutral-800">
+                Incredible end result! Our sales increased over 400% when we
+                worked with Sunnyside. Highly recommended!
+              </p>
+              <div>
+                <div className="mb-2 font-serif text-xl font-black">
+                  Jennie F.
+                </div>
+                <div className="text-sm text-neutral-700">Business Owner</div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="grid grid-cols-2">
+        <section className="grid grid-cols-2 desktop:grid-cols-4">
           <ImageSwitch
             mobileSrc={galleryMilkBottlesImgMobile}
             desktopSrc={galleryMilkBottlesImgDesktop}
