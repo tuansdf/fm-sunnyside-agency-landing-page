@@ -8,6 +8,5 @@ export const bodyFont = Barlow({
 
 export const headingFont = Fraunces({
   subsets: ["latin"],
-  weight: ["700", "900"],
   variable: "--font-heading",
 });
