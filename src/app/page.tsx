@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import ImageSwitch from "/src/app/image-switch";
 
 import arrowDownIcon from "/public/images/icon-arrow-down.svg";
@@ -32,22 +35,34 @@ import standOutImgMobile from "/public/images/mobile/image-stand-out.jpg";
 import transformImgMobile from "/public/images/mobile/image-transform.jpg";
 
 export default function Page() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+
   return (
     <>
       <nav className="absolute z-10 flex w-full items-center justify-between px-6 py-8 desktop:px-8">
         <Image src={logoImg} alt="logo" />
-        <button className="desktop:hidden">
+
+        <button onClick={toggleMenu} className="desktop:hidden">
           <Image src={hamburgerIcon} alt="hamburger" />
         </button>
-        <ul className="flex items-center gap-14 text-neutral-0">
+
+        <ul
+          className={`absolute top-full left-0 right-0 mx-6 mt-4 flex flex-col items-center gap-8 bg-neutral-0 py-10 text-center text-neutral-700 transition-opacity desktop:relative desktop:z-0 desktop:m-0 desktop:flex-row desktop:gap-14 desktop:bg-transparent desktop:p-0 desktop:text-neutral-0 desktop:opacity-100 ${
+            isOpen ? "" : "-z-50 opacity-0"
+          }`}
+        >
           <li>About</li>
           <li>Services</li>
           <li>Projects</li>
           <li>
-            <button className="rounded-full bg-neutral-0 px-6 py-3 font-serif text-base font-bold uppercase text-neutral-900 transition-colors duration-75 hover:bg-neutral-0/25 hover:text-neutral-0">
+            <button className="rounded-full bg-primary-yellow px-4 py-3 font-serif text-base font-bold uppercase text-neutral-900 transition-colors duration-75 hover:bg-primary-yellow/25 desktop:bg-neutral-0 desktop:hover:bg-neutral-0/25 desktop:hover:text-neutral-0">
               Contact
             </button>
           </li>
+          {/* triangle */}
+          <div className="absolute right-0 top-0 h-0 w-0 -translate-y-1/2 border-y-[1.5rem] border-r-[1.5rem] border-y-transparent border-r-neutral-0 desktop:hidden"></div>
         </ul>
       </nav>
 

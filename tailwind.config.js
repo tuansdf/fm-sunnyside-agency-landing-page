@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -29,6 +31,7 @@ module.exports = {
         800: "hsl(213, 9%, 39%)",
         900: "hsl(212, 27%, 19%)",
       },
+      transparent: colors.transparent,
     },
   },
   plugins: [],
