@@ -34,11 +34,21 @@ import transformImgMobile from "/public/images/mobile/image-transform.jpg";
 export default function Page() {
   return (
     <>
-      <nav className="absolute z-10 flex w-full items-center justify-between px-6 py-8">
+      <nav className="absolute z-10 flex w-full items-center justify-between px-6 py-8 desktop:px-8">
         <Image src={logoImg} alt="logo" />
-        <button>
+        <button className="desktop:hidden">
           <Image src={hamburgerIcon} alt="hamburger" />
         </button>
+        <ul className="flex items-center gap-14 text-neutral-0">
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+          <li>
+            <button className="rounded-full bg-neutral-0 px-6 py-3 font-serif text-base font-bold uppercase text-neutral-900 transition-colors duration-75 hover:bg-neutral-0/25 hover:text-neutral-0">
+              Contact
+            </button>
+          </li>
+        </ul>
       </nav>
 
       <main className="flex-1">
