@@ -1,14 +1,19 @@
+import { bodyFont, headingFont } from "@/app/fonts";
 import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: {
+interface IProps {
   children: React.ReactNode;
-}) {
+}
+
+export default function RootLayout({ children }: IProps) {
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body
+        className={`${bodyFont.variable} ${headingFont.variable} font-sans`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
