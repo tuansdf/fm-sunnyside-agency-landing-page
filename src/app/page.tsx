@@ -49,15 +49,15 @@ export default function Page() {
             alt="header image"
           />
 
-          <div className="absolute flex w-full max-w-xs flex-col items-center">
-            <div className="mb-16 text-center font-serif text-4xl font-black uppercase leading-tight tracking-[0.2em] text-neutral-0">
+          <div className="absolute flex w-full max-w-xs flex-col items-center desktop:mb-36 desktop:max-w-none">
+            <div className="mb-16 text-center font-serif text-4xl font-black uppercase leading-tight tracking-[0.2em] text-neutral-0 desktop:mb-24 desktop:text-[3.5rem]">
               We are creatives
             </div>
             <Image src={arrowDownIcon} alt="" />
           </div>
         </section>
 
-        <div className="desktop:grid desktop:grid-cols-2">
+        <div className="desktop:grid desktop:grid-cols-2 desktop:place-items-center">
           <section>
             <ImageSwitch
               mobileSrc={transformImgMobile}
@@ -66,8 +66,8 @@ export default function Page() {
             />
           </section>
 
-          <section className="mx-auto max-w-xs space-y-8 py-16 text-center desktop:order-first">
-            <h2 className="mb-6 font-serif text-3xl font-black">
+          <section className="mx-auto max-w-xs space-y-8 py-16 text-center desktop:order-first desktop:max-w-md desktop:text-start">
+            <h2 className="mb-6 font-serif text-3xl font-black desktop:text-[2.5rem] desktop:leading-tight">
               Transform your brand
             </h2>
             <p className="mb-8 text-neutral-800">
@@ -88,8 +88,8 @@ export default function Page() {
             />
           </section>
 
-          <section className="mx-auto max-w-xs py-16 text-center">
-            <h2 className="mb-6 font-serif text-3xl font-black">
+          <section className="mx-auto max-w-xs py-16 text-center desktop:max-w-md desktop:text-start">
+            <h2 className="mb-6 font-serif text-3xl font-black desktop:text-[2.5rem] desktop:leading-tight">
               Stand out to the right audience
             </h2>
             <p className="mb-8 text-neutral-800">
@@ -140,13 +140,13 @@ export default function Page() {
           </section>
         </div>
 
-        <section className="mx-auto max-w-sm px-7 pt-16 pb-20 text-center desktop:max-w-7xl">
-          <h2 className="mb-16 font-serif text-base font-black uppercase tracking-[0.3em] text-neutral-600">
+        <section className="mx-auto max-w-sm px-6 pt-16 pb-20 text-center desktop:max-w-6xl desktop:px-5 desktop:py-40">
+          <h2 className="mb-16 font-serif text-base font-black uppercase tracking-[0.3em] text-neutral-600 desktop:mb-20 desktop:text-xl">
             Client testimonials
           </h2>
 
-          <div className="space-y-16 desktop:grid desktop:grid-cols-3 desktop:gap-10 desktop:space-y-0">
-            <div className="flex flex-col items-center space-y-8">
+          <div className="space-y-16 desktop:grid desktop:grid-cols-3 desktop:gap-8 desktop:space-y-0">
+            <div className="flex flex-col items-center space-y-8 desktop:space-y-16">
               <Image
                 src={emilyImg}
                 alt="Emily's image"
@@ -157,16 +157,14 @@ export default function Page() {
                 our needs were met and deadlines were always hit.
               </p>
               <div>
-                <div className="mb-2 font-serif text-xl font-black">
-                  Emily R.
-                </div>
+                <div className="mb-2 font-serif font-black">Emily R.</div>
                 <div className="text-sm text-neutral-700">
                   Marketing Director
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col items-center space-y-8">
+            <div className="flex flex-col items-center space-y-8 desktop:space-y-16">
               <Image
                 src={thomasImg}
                 alt="Thomas's image"
@@ -178,16 +176,14 @@ export default function Page() {
                 experience.
               </p>
               <div>
-                <div className="mb-2 font-serif text-xl font-black">
-                  Thomas S.
-                </div>
+                <div className="mb-2 font-serif font-black">Thomas S.</div>
                 <div className="text-sm text-neutral-700">
                   Chief Operating Officer
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col items-center space-y-8">
+            <div className="flex flex-col items-center space-y-8 desktop:space-y-16">
               <Image
                 src={jennieImg}
                 alt="Jennie's image"
@@ -198,9 +194,7 @@ export default function Page() {
                 worked with Sunnyside. Highly recommended!
               </p>
               <div>
-                <div className="mb-2 font-serif text-xl font-black">
-                  Jennie F.
-                </div>
+                <div className="mb-2 font-serif font-black">Jennie F.</div>
                 <div className="text-sm text-neutral-700">Business Owner</div>
               </div>
             </div>
@@ -231,7 +225,7 @@ export default function Page() {
         </section>
       </main>
 
-      <footer className="flex flex-col items-center bg-[#8fd3c4] pt-16 pb-20 text-center">
+      <footer className="flex flex-col items-center bg-[#8fd3c4] pt-16 pb-20 text-center desktop:pt-20">
         <svg
           width="124"
           height="24"
